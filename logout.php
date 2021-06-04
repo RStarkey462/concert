@@ -21,6 +21,22 @@
       <link href="https://fonts.googleapis.com/css?family=Arimo:400,400i,700|Great+Vibes|Montserrat:400,700|Open+Sans:400,400i,600,600i,700,800i" rel="stylesheet">
   </head>
   <body>
+
+  <?php
+  #Get Band info // Add SQL function
+
+  $BandA_name = "The roaches";
+  $BandA_perf = "Trivium";
+
+  $BandB_name = "Rolling Rocks";
+  $BandB_perf = "The Front Bottoms";
+
+  $BandC_name = "BaaB";
+  $BandC_perf = "Capstan";
+
+  $BandD_name = "12 Captains";
+  $BandD_perf = "Waterparks";
+  ?>
       <header class="header header-basic header-style_16 header-sticky menu-no-transparent">
           <div class="header-top">
 
@@ -82,7 +98,7 @@
                                           <img src="assets/images/slide-home6/slide41.jpg" alt="img">
                                       </figure>
                                       <div class="slide-content content-slide-v6-1 text-center">
-                                          <h2 class="title-slide-lar">BAND NAME ONE</h2>
+                                          <h2 class="title-slide-lar"><?php echo $BandA_name; ?></h2>
                                       </div>
                                   </div>
                                   <div class="item-slide">
@@ -90,7 +106,7 @@
                                           <img src="assets/images/slide-home6/slide42.jpg" alt="img">
                                       </figure>
                                       <div class="slide-content content-slide-v6-1 text-center">
-                                          <h2 class="title-slide-lar">BAND NAME TWO</h2>
+                                          <h2 class="title-slide-lar"><?php echo $BandB_name; ?></h2>
                                       </div>
                                   </div>
                                   <div class="item-slide">
@@ -98,7 +114,7 @@
                                           <img src="assets/images/slide-home6/slide43.jpg" alt="img">
                                       </figure>
                                       <div class="slide-content content-slide-v6-1 text-center">
-                                          <h2 class="title-slide-lar">BAND NAME THREE</h2>
+                                          <h2 class="title-slide-lar"><?php echo $BandC_name; ?></h2>
                                       </div>
                                   </div>
                                   <div class="item-slide">
@@ -106,7 +122,7 @@
                                           <img src="assets/images/slide-home6/slide44.jpg" alt="img">
                                       </figure>
                                       <div class="slide-content content-slide-v6-1 text-center">
-                                          <h2 class="title-slide-lar">BAND NAME FOUR</h2>
+                                          <h2 class="title-slide-lar"><?php echo $BandD_name; ?></h2>
                                       </div>
                                   </div>
                               </div>
@@ -120,26 +136,26 @@
                               </div><br>
                       <div class="col-sm-4">
                               <figure>
-                                  <p class="icon-box-desc">Band One:<br>
-                                            Trivium</p>
+                                  <p class="icon-box-desc"><?php echo $BandA_name; ?>:<br>
+                                    <?php echo $BandA_perf; ?></p>
                               </figure>
                               </div><br>
                       <div class="col-sm-4">
                               <figure>
-                                  <p class="icon-box-desc">Band Two:<br>
-                                            The Front Bottoms</p>
+                                  <p class="icon-box-desc"><?php echo $BandB_name; ?>:<br>
+                                    <?php echo $BandB_perf; ?></p>
                               </figure>
                                </div><br>
                                <div class="col-sm-4">
                               <figure>
-                                  <p class="icon-box-desc">Band Three:<br>
-                                            Capstan</p>
+                                  <p class="icon-box-desc"><?php echo $BandC_name; ?>:<br>
+                                    <?php echo $BandC_perf; ?></p>
                               </figure>
                               </div><br>
                       <div class="col-sm-4">
                               <figure>
-                                  <p class="icon-box-desc">Band Four:<br>
-                                            Waterparks</p>
+                                  <p class="icon-box-desc"><?php echo $BandD_name; ?>:<br>
+                                    <?php echo $BandD_perf; ?></p>
                               </figure>
                               </div><br>
 

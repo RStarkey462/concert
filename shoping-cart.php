@@ -66,41 +66,63 @@
                                                 </tr>
                                             </thead>
                                             <tbody>
-                                                <tr class="cart_item">
-                                                    <td class="product-thumbnail">
-                                                        <a href="#"><img width="120" height="144" src="assets/images/thumb-cart1.jpg" class="attachment-shop_thumbnail wp-post-image" alt="poster_2_up" /></a>
-                                                    </td>
 
-                                                    <td class="product-name">
-                                                        <a href="#">Rust Shirt With Half Sleeves</a>
-                                                        <p>Lorem ipsum dolor sit amet, consectetur
-                                                            adipiscing elit.</p>
-                                                    </td>
+                                                <?php
+                                                    # Product Information
+                                                    $arrayList = array(
+                                                        ['name' => 'Rust shirt with half Sleeves','desc' => 'A shirt that will leave your arms slightly cold.', 'cost' => '12.00'],
+                                                        ['name' => 'Hooded Denim Jacket in black','desc' => 'Popular with humans.', 'cost' => '35.00']
+                                                    );
 
-                                                    <td class="product-price">
-                                                        <span class="amount">&pound;12.00</span>
-                                                    </td>
+                                                    #Repeat the product listing code for each known product.
+                                                    foreach($arrayList as &$products)
+                                                    {
 
-                                                    <td class="product-quantity">
-                                                        <div class="quantity">
-                                                            <input class="minus" type="button" value="-">
-                                                            <input class="input-text qty text" type="text" size="4" title="Qty" value="1" name="quantity">
-                                                            <input class="plus" type="button" value="+">
-                                                        </div>
-                                                    </td>
+                                                         echo "
+                                                            <tr class='cart_item'>
+                                                                <td class='product-thumbnail'>
+                                                                    <a href='#'><img width='120' height='144' src='assets/images/thumb-cart1.jpg' class='attachment-shop_thumbnail wp-post-image' alt='poster_2_up' /></a>
+                                                                </td>
 
-                                                    <td class="product-subtotal">
-                                                        <span class="amount">&pound;12.00</span>
-                                                    </td>
-                                                    <td class="product-remove">
-                                                        <a href="#" class="remove" title="Remove this item"><i class="flaticon-dustbin"></i></a>
-                                                    </td>
-                                                </tr>
-                                                <tr class="cart_item">
+                                                                <td class='product-name'>
+                                                                    <a href='#'>";
+                                                        echo $products['name']; 
+                                                            echo " </a> <p>";
+                                                        echo $products['desc'];
+                                                            echo "</p>
+                                                                </td>
 
-                                                    <td class="product-thumbnail">
-                                                        <a href="#"><img width="120" height="144" src="assets/images/thumb-cart2.jpg" class="attachment-shop_thumbnail wp-post-image" alt="hoodie_4_front" /></a>
-                                                    </td>
+                                                                <td class='product-price'>
+                                                                    <span class='amount'>&pound;"
+                                                        echo $products['cost'];
+                                                            echo "</span>
+                                                                </td>
+
+                                                                <td class='product-quantity'>
+                                                                    <div class='quantity'>
+                                                                        <input class='minus' type='button' value='-'>
+                                                                        <input class='input-text qty text' type='text' size='4' title='Qty' value='1' name='quantity'>
+                                                                        <input class='plus' type='button' value='+'>
+                                                                    </div>
+                                                                </td>
+
+                                                                <td class='product-subtotal'>
+                                                                    <span class='amount'>&pound;12.00</span>
+                                                                </td>
+                                                                <td class='product-remove'>
+                                                                    <a href='#' class='remove' title='Remove this item'><i class='flaticon-dustbin'></i></a>
+                                                                </td>
+                                                            </tr> ";
+                                                        }
+                                                        unset($value);
+                                                    ?>
+
+
+                                                    <tr class='cart_item'>
+
+                                                        <td class="product-thumbnail">
+                                                            <a href="#"><img width="120" height="144" src="assets/images/thumb-cart2.jpg" class="attachment-shop_thumbnail wp-post-image" alt="hoodie_4_front" /></a>
+                                                        </td>
 
                                                     <td class="product-name">
                                                         <a href="#">Hooded Denim Jacket in Black</a>
